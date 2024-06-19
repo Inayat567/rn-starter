@@ -6,12 +6,21 @@ import Root from './Drawer';
 
 const BaseNavigation = () => {
   const Stack = createNativeStackNavigator();
+
+  const Other = () => <></>;
+
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="bottom">
+      <Stack.Navigator
+        initialRouteName="root"
+        screenOptions={{
+          headerShown: false,
+        }}>
+        {/* if you have drawer */}
         <Stack.Screen name="root" component={Root} />
+        {/* if you dont have drawer */}
         <Stack.Screen name="bottom" component={BottomTab} />
-        <Stack.Screen name="other" component={() => <></>} />
+        <Stack.Screen name="other" component={Other} />
       </Stack.Navigator>
     </NavigationContainer>
   );
