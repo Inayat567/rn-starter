@@ -1,9 +1,9 @@
 import {StyleSheet} from 'react-native';
 
-const SButton = StyleSheet.create({
+const SAccordian = StyleSheet.create({
   container: {
     // styles
   },
 });
 
-export default SButton;
+export default SAccordian;
