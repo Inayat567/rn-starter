@@ -1,13 +1,13 @@
 import {View, Text} from 'react-native';
 import React from 'react';
-import {ButtonProp} from './Button';
+import {RadioProp} from './Radio';
 
-const Button = ({}: ButtonProp) => {
+const Radio = ({}: RadioProp) => {
   return (
     <View>
-      <Text>Button</Text>
+      <Text>Radio</Text>
     </View>
   );
 };
 
-export default Button;
+export default Radio;

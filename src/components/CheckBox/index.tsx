@@ -1,13 +1,13 @@
 import {View, Text} from 'react-native';
 import React from 'react';
-import {ButtonProp} from './Button';
+import {CheckBoxProp} from './CheckBox';
 
-const Button = ({}: ButtonProp) => {
+const CheckBox = ({}: CheckBoxProp) => {
   return (
     <View>
-      <Text>Button</Text>
+      <Text>CheckBox</Text>
     </View>
   );
 };
 
-export default Button;
+export default CheckBox;

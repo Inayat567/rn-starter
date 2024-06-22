@@ -1,13 +1,13 @@
 import {View, Text} from 'react-native';
 import React from 'react';
-import {ButtonProp} from './Button';
+import {RangeSliderProp} from './RangeSlider';
 
-const Button = ({}: ButtonProp) => {
+const RangeSlider = ({}: RangeSliderProp) => {
   return (
     <View>
-      <Text>Button</Text>
+      <Text>RangeSlider</Text>
     </View>
   );
 };
 
-export default Button;
+export default RangeSlider;
