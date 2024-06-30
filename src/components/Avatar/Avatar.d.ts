@@ -1,11 +1,10 @@
 import {ImageSourcePropType, ImageStyle} from 'react-native';
 
 export interface AvatarProps {
-  src: ImageSourcePropType;
+  src: string;
   size?: 's' | 'm' | 'l';
-  rounded?: boolean;
   border?: boolean;
-  circle?: boolean;
+  borderColor?: string,
   style?: ImageStyle;
   onPress?: () => void;
 }

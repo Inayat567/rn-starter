@@ -2886,6 +2886,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-native-vector-icons@npm:^6.4.18":
+  version: 6.4.18
+  resolution: "@types/react-native-vector-icons@npm:6.4.18"
+  dependencies:
+    "@types/react": "*"
+    "@types/react-native": ^0.70
+  checksum: 1ef458cb5e7a37f41eb400e3153940b1b152e4df76a7c06c7a47c712dbfe46e14b9999f04dde1bd074f338f850e161c6c925174ddea33386b74f8112c940065b
+  languageName: node
+  linkType: hard
+
+"@types/react-native@npm:^0.70":
+  version: 0.70.19
+  resolution: "@types/react-native@npm:0.70.19"
+  dependencies:
+    "@types/react": "*"
+  checksum: 79b504fa56340631079e7c20ea0d9412ec14147b76d0ce189f4403936f529ef1e6fd031383afab117846c5ae039123bcf3afc948bae4432269c6780282726f71
+  languageName: node
+  linkType: hard
+
 "@types/react-test-renderer@npm:^18.0.0":
   version: 18.3.0
   resolution: "@types/react-test-renderer@npm:18.3.0"
@@ -8147,6 +8166,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-animatable@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "react-native-animatable@npm:1.4.0"
+  dependencies:
+    prop-types: ^15.8.1
+  checksum: a1b211aff745b97351d78643d641fa298f7d71524eaf22fee8a69257ce52e85d6b3caf8e7fd26a521af34984fba7402b7c632c35ea69d618769387d1dcb6b32a
+  languageName: node
+  linkType: hard
+
+"react-native-collapsible@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "react-native-collapsible@npm:1.6.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: ec28769002dd29290f3a9e49ebb7d8ac93a7dfd759669a06f3c235983548e622269b267753b32c4f41224ca5ea6b71bc497fd8594bba0d1e28566f44318a06b7
+  languageName: node
+  linkType: hard
+
 "react-native-dropdown-picker@npm:^5.4.6":
   version: 5.4.6
   resolution: "react-native-dropdown-picker@npm:5.4.6"
@@ -8627,6 +8665,7 @@ __metadata:
     "@react-navigation/native": ^6.1.17
     "@react-navigation/native-stack": ^6.9.26
     "@types/react": ^18.2.6
+    "@types/react-native-vector-icons": ^6.4.18
     "@types/react-test-renderer": ^18.0.0
     babel-jest: ^29.6.3
     eslint: ^8.19.0
@@ -8634,6 +8673,8 @@ __metadata:
     prettier: 2.8.8
     react: 18.2.0
     react-native: 0.74.2
+    react-native-animatable: ^1.4.0
+    react-native-collapsible: ^1.6.1
     react-native-dropdown-picker: ^5.4.6
     react-native-gesture-handler: ^2.16.2
     react-native-reanimated: ^3.12.0
