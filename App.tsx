@@ -8,10 +8,12 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import BaseNavigation from './src/navigation';
+import {CustomStatusBar} from './src/components';
 
 function App(): React.JSX.Element {
   return (
     <View style={styles.container}>
+      <CustomStatusBar />
       <BaseNavigation />
     </View>
   );

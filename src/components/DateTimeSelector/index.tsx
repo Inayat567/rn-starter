@@ -1,7 +1,7 @@
-import {View, Text} from 'react-native';
 import React from 'react';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {DateTimeSelectorProps} from './DateTimeSelector';
+import SDTS from './DateTImeSelector.styles';
 
 const DateTimeSelector = ({
   date,
@@ -15,13 +15,13 @@ const DateTimeSelector = ({
   return (
     <DateTimePicker
       testID="dateTimePicker"
-      style={style}
+      style={[SDTS.container, style]}
       value={date}
       mode={mode}
       minimumDate={minDate}
       maximumDate={maxDate}
       is24Hour={is24Hour ?? true}
-      onChange={onSelect}
+      onChange={e => onSelect(e.nativeEvent.timestamp)}
     />
   );
 };

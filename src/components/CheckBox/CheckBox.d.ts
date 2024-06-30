@@ -1,7 +1,8 @@
-import {ViewStyle} from 'react-native';
+import {TextStyle, ViewStyle} from 'react-native';
 
 export interface CheckBoxProp {
   title: string;
-  checked: boolean;
   onPress: (checked: boolean) => void;
+  textStyle?: TextStyle;
+  borderColor?: string;
 }

@@ -1,10 +1,10 @@
 import {StyleSheet} from 'react-native';
-import {normalizeFont, normalizeHeight} from '../../utils/globalFunctions';
+import {normalizeFont, normalizeHeight, normalizeWidth} from '../../utils/globalFunctions';
 import { COLORS } from '../../utils/constants/color';
 
 const SButton = StyleSheet.create({
   container: {
-    width: '90%',
+    width: normalizeWidth(320),
     height: normalizeHeight(50),
     backgroundColor: COLORS.button,
     borderRadius: 10,

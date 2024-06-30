@@ -1,11 +1,14 @@
-import {View, Text} from 'react-native';
+import {StatusBar} from 'react-native';
 import React from 'react';
+import {COLORS} from '../../utils/constants/color';
 
 const CustomStatusBar = () => {
   return (
-    <View>
-      <Text>CustomStatusBar</Text>
-    </View>
+    <StatusBar
+      backgroundColor={COLORS.white}
+      animated={true}
+      barStyle={'dark-content'}
+    />
   );
 };
 

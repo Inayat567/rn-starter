@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {normalizeFont, normalizeHeight} from '../../utils/globalFunctions';
+import {normalizeFont, normalizeHeight, normalizeWidth} from '../../utils/globalFunctions';
 import {COLORS} from '../../utils/constants/color';
 
 const SAccordian = StyleSheet.create({
@@ -12,7 +12,7 @@ const SAccordian = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 10,
+    paddingHorizontal: normalizeWidth(10),
     paddingVertical: normalizeHeight(5),
   },
   title: {

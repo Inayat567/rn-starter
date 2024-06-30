@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import { normalizeHeight } from '../../utils/globalFunctions';
+import {normalizeHeight, normalizeWidth} from '../../utils/globalFunctions';
 
 const SAvatar = StyleSheet.create({
   container: {
@@ -7,19 +7,19 @@ const SAvatar = StyleSheet.create({
     margin: 10,
   },
   small: {
-    width: 40,
+    width: normalizeWidth(40),
     height: normalizeHeight(40),
-    borderRadius: 20
+    borderRadius: 20,
     // aspectRatio: '0.2',
   },
   medium: {
-    width: 80,
+    width: normalizeWidth(80),
     height: normalizeHeight(80),
-    borderRadius: 40
+    borderRadius: 40,
     // aspectRatio: '0.4',
   },
   large: {
-    width: 120,
+    width: normalizeWidth(120),
     height: normalizeHeight(120),
     borderRadius: 80,
     // aspectRatio: '0.6',

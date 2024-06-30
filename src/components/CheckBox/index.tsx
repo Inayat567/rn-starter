@@ -1,11 +1,28 @@
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
+import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {CheckBoxProp} from './CheckBox';
+import {COLORS} from '../../utils/constants/color';
+import SCheckBox from './CheckBox.styles';
 
-const CheckBox = ({}: CheckBoxProp) => {
+const CheckBox = ({
+  title,
+  onPress,
+  textStyle,
+  borderColor,
+}: CheckBoxProp) => {
   return (
-    <View>
-      <Text>CheckBox</Text>
+    <View style={SCheckBox.container}>
+      <BouncyCheckbox
+        size={25}
+        fillColor={COLORS.warning}
+        unFillColor={COLORS.white}
+        text={title}
+        iconStyle={[SCheckBox.icon, {borderColor: borderColor || COLORS.black}]}
+        innerIconStyle={[SCheckBox.icon, {borderWidth: 2}]}
+        textStyle={[SCheckBox.title, textStyle]}
+        onPress={onPress}
+      />
     </View>
   );
 };
