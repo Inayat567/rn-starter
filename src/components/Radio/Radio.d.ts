@@ -1,7 +1,14 @@
+import {Dispatch, SetStateAction} from 'react';
 import {ViewStyle} from 'react-native';
 
-export interface RadioProp {
-  title: string;
+export type ItemProp = {
+  id: number;
   selected: boolean;
-  onPress: () => void;
+  label: string;
+};
+
+export interface RadioProp {
+  data: ItemProp[];
+  selectOption: Dispatch<SetStateAction<T>>;
+  selectedOption: T;
 }

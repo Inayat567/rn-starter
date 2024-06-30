@@ -2,7 +2,14 @@ import {StyleSheet} from 'react-native';
 
 const SRangeSlider = StyleSheet.create({
   container: {
-    // styles
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    margin: 10
+  },
+  slider: {
+    width: '75%',
+    alignSelf: 'center',
   },
 });
 

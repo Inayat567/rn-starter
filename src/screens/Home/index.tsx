@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import {
   Accordian,
@@ -11,6 +11,8 @@ import {
   H3,
   InputField,
   Loader,
+  Radio,
+  RangeSliders,
 } from '../../components';
 import moment from 'moment';
 import SHome from './Home.styles';
@@ -21,13 +23,34 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState(new Date());
+  const [name, setName] = useState('');
+  const [value, setValue] = useState(0);
+  const [gender, setGender] = useState<'Male' | 'Female'>('Male');
   const [showDatePicker, setShowDatePicker] = useState({
     date: false,
     time: false,
   });
 
+  const data = [
+    {
+      id: 1,
+      selected: false,
+      label: 'Male',
+    },
+    {
+      id: 2,
+      selected: false,
+      label: 'Female',
+    },
+    {
+      id: 3,
+      selected: false,
+      label: 'Other',
+    },
+  ];
+
   return (
-    <View style={SHome.container}>
+    <ScrollView style={SHome.container}>
       <H1 text="Heading 1" />
       <H2 text="Heading 2" />
       <H3 text="Headin 3" />
@@ -44,12 +67,28 @@ const Home = () => {
         <Button title="test" onPress={() => {}} />
       </Accordian>
       <CheckBox onPress={() => setChecked(!checked)} title="test" />
-      <Text onPress={() => setShowDatePicker({date: true, time: false})}>
-        Date: {moment(date).format('dd/mm/yyyy')}
-      </Text>
-      <Text onPress={() => setShowDatePicker({date: false, time: true})}>
-        Time: {moment(time).format('hh:mm A')}
-      </Text>
+      <H2
+        text={`Date: ${moment(date).format('dd/mm/yyyy')}`}
+        onPress={() => setShowDatePicker({date: true, time: false})}
+      />
+      <H2
+        text={`Time: ${moment(time).format('hh:mm A')}`}
+        onPress={() => setShowDatePicker({date: false, time: true})}
+      />
+      <InputField
+        value={name}
+        onChangeText={name => setName(name)}
+        placeholder="Enter name"
+        icon="person-sharp"
+        // multiline
+      />
+      <Radio data={data} selectOption={setGender} selectedOption={gender} />
+     
+      <RangeSliders
+        value={value}
+        onChange={(value: number) => setValue(value)}
+      />
+
       {showDatePicker.date && (
         <DateTimeSelector
           date={date}
@@ -71,7 +110,7 @@ const Home = () => {
         />
       )}
       <Loader isLoading={false} />
-    </View>
+    </ScrollView>
   );
 };
 

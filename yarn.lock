@@ -8671,6 +8671,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rn-range-slider@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "rn-range-slider@npm:2.2.2"
+  checksum: 6d9273ff103584319d0095794ee21da48c49609978321677e22c9d1d2eb22ce7fd72228382a8777828fac7b646eb814cee4e2c764e44f11cb92a7d5936ded529
+  languageName: node
+  linkType: hard
+
 "rnstarter@workspace:.":
   version: 0.0.0-use.local
   resolution: "rnstarter@workspace:."
@@ -8707,6 +8714,7 @@ __metadata:
     react-native-screens: ^3.31.1
     react-native-vector-icons: ^10.1.0
     react-test-renderer: 18.2.0
+    rn-range-slider: ^2.2.2
     typescript: 5.0.4
   languageName: unknown
   linkType: soft

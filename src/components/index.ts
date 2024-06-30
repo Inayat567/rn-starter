@@ -3,7 +3,7 @@ import InputField from './InputField';
 import Accordian from './Accordian';
 import CheckBox from './CheckBox';
 import Radio from './Radio';
-import RangeSlider from './RangeSlider';
+import RangeSliders from './RangeSlider';
 import DropDownSelector from './DropDownSelector';
 import DateTimeSelector from './DateTimeSelector';
 import Loader from './Loader';
@@ -20,7 +20,7 @@ export {
   Accordian,
   CheckBox,
   Radio,
-  RangeSlider,
+  RangeSliders,
   DropDownSelector,
   DateTimeSelector,
   Loader,
