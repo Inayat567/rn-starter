@@ -6,11 +6,15 @@ import {
   Button,
   CheckBox,
   DateTimeSelector,
+  H1,
+  H2,
+  H3,
   InputField,
   Loader,
 } from '../../components';
 import moment from 'moment';
 import SHome from './Home.styles';
+import {BoldText, NormalText} from '../../components/Heading';
 
 const Home = () => {
   const [checked, setChecked] = useState(false);
@@ -24,6 +28,11 @@ const Home = () => {
 
   return (
     <View style={SHome.container}>
+      <H1 text="Heading 1" />
+      <H2 text="Heading 2" />
+      <H3 text="Headin 3" />
+      <NormalText text="Normal Text" />
+      <BoldText text="Bold Text" />
       <Button title="test" onPress={() => {}} />
       <Avatar src="https://picsum.photos/id/1/200/300" size="s" />
       <Accordian heading="test">
