@@ -2,7 +2,7 @@ import {TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import {AvatarProps} from './Avatar';
 import SAvatar from './Avatar.styles';
-import { COLORS } from '../../utils/constants/color';
+import {COLORS} from '../../utils/constants/color';
 
 const Avatar = ({
   src,
@@ -16,6 +16,7 @@ const Avatar = ({
     return (
       <TouchableOpacity onPress={onPress}>
         <Image
+          testID="avatar"
           source={{uri: src}}
           style={[
             SAvatar.container,
@@ -36,6 +37,7 @@ const Avatar = ({
   } else {
     return (
       <Image
+        testID="avatar"
         source={{uri: src}}
         style={[
           SAvatar.container,

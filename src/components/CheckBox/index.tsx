@@ -5,15 +5,11 @@ import {CheckBoxProp} from './CheckBox';
 import {COLORS} from '../../utils/constants/color';
 import SCheckBox from './CheckBox.styles';
 
-const CheckBox = ({
-  title,
-  onPress,
-  textStyle,
-  borderColor,
-}: CheckBoxProp) => {
+const CheckBox = ({title, onPress, textStyle, borderColor}: CheckBoxProp) => {
   return (
     <View style={SCheckBox.container}>
       <BouncyCheckbox
+        testID="bouncyCheckBox"
         size={25}
         fillColor={COLORS.warning}
         unFillColor={COLORS.white}

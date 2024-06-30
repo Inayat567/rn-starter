@@ -50,7 +50,7 @@ const Accordian = ({heading, children}: AccordianProp) => {
   };
 
   return (
-    <View>
+    <View testID="accordion">
       <Accordion
         activeSections={[0]}
         sectionContainerStyle={SAccordian.container}

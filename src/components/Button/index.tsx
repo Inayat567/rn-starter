@@ -2,7 +2,7 @@ import {View, Text, TouchableOpacity, ActivityIndicator} from 'react-native';
 import React from 'react';
 import {ButtonProp} from './Button';
 import SButton from './Button.styles';
-import { COLORS } from '../../utils/constants/color';
+import {COLORS} from '../../utils/constants/color';
 
 const Button = ({
   title,
@@ -15,6 +15,7 @@ const Button = ({
 }: ButtonProp) => {
   return (
     <TouchableOpacity
+      testID="button"
       style={[SButton.container, style, secondary ? SButton.inActive : null]}
       disabled={disabled ? true : false}
       onPress={onPress}>
