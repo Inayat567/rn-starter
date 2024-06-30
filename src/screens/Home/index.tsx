@@ -68,7 +68,7 @@ const Home = () => {
       </Accordian>
       <CheckBox onPress={() => setChecked(!checked)} title="test" />
       <H2
-        text={`Date: ${moment(date).format('dd/mm/yyyy')}`}
+        text={`Date: ${moment(date).format('DD/MM/YYYY')}`}
         onPress={() => setShowDatePicker({date: true, time: false})}
       />
       <H2
@@ -80,6 +80,7 @@ const Home = () => {
         onChangeText={name => setName(name)}
         placeholder="Enter name"
         icon="person-sharp"
+        disable={false}
         // multiline
       />
       <Radio data={data} selectOption={setGender} selectedOption={gender} />
