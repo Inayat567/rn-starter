@@ -1,34 +1,53 @@
 import {View, Text} from 'react-native';
-import DropDownPicker from 'react-native-dropdown-picker';
 import React from 'react';
+import {Dropdown} from 'react-native-element-dropdown';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {DropDownSelectorProps} from './DopDownSelector';
+import SDDS from './DropDownSelector.styles';
 
 const DropDownSelector = ({
-  open,
+  isFocus,
+  setIsFocus,
+  data,
   value,
-  items,
-  setOpen,
   setValue,
-  setItems,
   style,
-  multiple,
-  min,
-  max,
-  maxHeight
+  search,
+  searchPlaceholder,
+  placeholder,
+  icon,
 }: DropDownSelectorProps) => {
   return (
-    <DropDownPicker
-      style={style}
-      open={open}
+    <Dropdown
+      style={[SDDS.dropdown, style, isFocus && {borderColor: 'blue'}]}
+      placeholderStyle={SDDS.placeholderStyle}
+      selectedTextStyle={SDDS.selectedTextStyle}
+      inputSearchStyle={SDDS.inputSearchStyle}
+      iconStyle={SDDS.iconStyle}
+      data={data}
+      search={search || false}
+      maxHeight={300}
+      labelField="label"
+      valueField="value"
+      placeholder={!isFocus ? 'Select item' : '...'}
+      searchPlaceholder={searchPlaceholder || 'Search'}
       value={value}
-      items={items}
-      setOpen={setOpen}
-      setValue={setValue}
-      setItems={setItems}
-      multiple={multiple ?? false}
-      maxHeight={maxHeight ?? 200}
-      min={min}
-      max={max}
+      onFocus={() => setIsFocus(true)}
+      onBlur={() => setIsFocus(false)}
+      onChange={item => {
+        setValue(item.value);
+        setIsFocus(false);
+      }}
+      renderLeftIcon={() =>
+        icon ? (
+          <Icon
+            style={SDDS.icon}
+            color={isFocus ? 'blue' : 'black'}
+            name={icon}
+            size={20}
+          />
+        ) : null
+      }
     />
   );
 };
