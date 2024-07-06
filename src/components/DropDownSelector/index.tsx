@@ -4,6 +4,7 @@ import {Dropdown} from 'react-native-element-dropdown';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {DropDownSelectorProps} from './DopDownSelector';
 import SDDS from './DropDownSelector.styles';
+import { keywords } from '../../utils/constants/keywords';
 
 const DropDownSelector = ({
   isFocus,
@@ -29,7 +30,7 @@ const DropDownSelector = ({
       maxHeight={300}
       labelField="label"
       valueField="value"
-      placeholder={!isFocus ? 'Select item' : '...'}
+      placeholder={!isFocus ? placeholder: '...'}
       searchPlaceholder={searchPlaceholder || 'Search'}
       value={value}
       onFocus={() => setIsFocus(true)}

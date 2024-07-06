@@ -5,7 +5,7 @@ import {RangeSliderProp} from './RangeSlider';
 import SRangeSlider from './RangeSlider.styles';
 import {NormalText} from '../Heading';
 
-const RangeSliders = ({value, onChange}: RangeSliderProp) => {
+const RangeSliders = ({title, value, onChange}: RangeSliderProp) => {
   const renderThumb = useCallback(() => <Text></Text>, []);
   const renderRail = useCallback(
     () => (
@@ -40,7 +40,7 @@ const RangeSliders = ({value, onChange}: RangeSliderProp) => {
 
   return (
     <View style={SRangeSlider.container}>
-      <NormalText text="Distance: " />
+      <NormalText text={title} />
       <RangeSlider
         style={SRangeSlider.slider}
         min={0}
