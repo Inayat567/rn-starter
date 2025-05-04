@@ -19,16 +19,14 @@ const BottomSheets = ({
 
   // renders
   return (
-      <BottomSheet
-        snapPoints={[1, snapPoint]}
-        style={[SBS.container, style]}
-        ref={bottomSheetRef}
-        onChange={handleSheetChanges}
-        handleHeight={20}>
-        <BottomSheetView style={SBS.contentContainer}>
-          {children}
-        </BottomSheetView>
-      </BottomSheet>
+    <BottomSheet
+      snapPoints={[1, snapPoint]}
+      style={[SBS.container, style]}
+      ref={bottomSheetRef}
+      onChange={handleSheetChanges}
+      handleHeight={20}>
+      <BottomSheetView style={SBS.contentContainer}>{children}</BottomSheetView>
+    </BottomSheet>
   );
 };
 

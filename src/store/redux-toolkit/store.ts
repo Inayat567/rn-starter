@@ -1,15 +1,15 @@
 import {configureStore} from '@reduxjs/toolkit';
 import counterReducer from './reducers/counter.slice';
-import { pokemonApi } from './services/pokeman';
-import { setupListeners } from '@reduxjs/toolkit/query';
+import {pokemonApi} from './services/pokeman';
+import {setupListeners} from '@reduxjs/toolkit/query';
 
 // Create the store with the counter reducer
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
-    [pokemonApi.reducerPath]: pokemonApi.reducer
+    [pokemonApi.reducerPath]: pokemonApi.reducer,
   },
-  middleware: (getDefaultMiddleware) =>
+  middleware: getDefaultMiddleware =>
     getDefaultMiddleware().concat([pokemonApi.middleware]), // Add any additional middleware here
 });
 
@@ -18,4 +18,4 @@ export type RootState = ReturnType<typeof store.getState>;
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
 
-setupListeners(store.dispatch)
+setupListeners(store.dispatch);

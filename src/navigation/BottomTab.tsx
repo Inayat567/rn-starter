@@ -2,7 +2,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Home} from '../screens';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {normalizeFont} from '../utils/globalFunctions';
+import {f} from '../utils/globalFunctions';
 import {COLORS} from '../utils/constants/color';
 
 const Tab = createBottomTabNavigator();
@@ -13,19 +13,18 @@ const BottomTab = () => {
       initialRouteName="home"
       screenOptions={{
         headerShown: false,
-        tabBarHideOnKeyboard: true
+        tabBarHideOnKeyboard: true,
       }}>
       <Tab.Screen
         name="search"
         component={Home}
         options={{
-          tabBarLabelStyle: {fontSize: 1},
           tabBarLabel: '',
           tabBarIcon: ({focused}) => (
             <Icon
               name="search"
-              size={normalizeFont(30)}
-              color={focused ? '#00F' : '#000'}
+              size={f(30)}
+              color={focused ? COLORS.black : COLORS.gray}
             />
           ),
         }}
@@ -34,13 +33,12 @@ const BottomTab = () => {
         name="wallet"
         component={Home}
         options={{
-          tabBarLabelStyle: {fontSize: 1},
           tabBarLabel: '',
           tabBarIcon: ({focused}) => (
             <Icon
               name="wallet"
-              size={normalizeFont(30)}
-              color={focused ? '#00F' : '#000'}
+              size={f(30)}
+              color={focused ? COLORS.black : COLORS.gray}
             />
           ),
         }}
@@ -49,13 +47,12 @@ const BottomTab = () => {
         name="home"
         component={Home}
         options={{
-          tabBarLabelStyle: {fontSize: 1},
           tabBarLabel: '',
           tabBarIcon: ({focused}) => (
             <Icon
               name="home"
-              size={normalizeFont(30)}
-              color={focused ? '#00F' : '#000'}
+              size={f(30)}
+              color={focused ? COLORS.black : COLORS.gray}
             />
           ),
         }}
@@ -64,13 +61,12 @@ const BottomTab = () => {
         name="profile"
         component={Home}
         options={{
-          tabBarLabelStyle: {fontSize: 1},
           tabBarLabel: '',
           tabBarIcon: ({focused}) => (
             <Icon
               name="person"
-              size={normalizeFont(30)}
-              color={focused ? '#00F' : '#000'}
+              size={f(30)}
+              color={focused ? COLORS.black : COLORS.gray}
             />
           ),
         }}
@@ -79,13 +75,12 @@ const BottomTab = () => {
         name="setting"
         component={Home}
         options={{
-          tabBarLabelStyle: {fontSize: 1},
           tabBarLabel: '',
           tabBarIcon: ({focused}) => (
             <Icon
               name="settings"
-              size={normalizeFont(30)}
-              color={focused ? '#00F' : '#000'}
+              size={f(30)}
+              color={focused ? COLORS.black : COLORS.gray}
             />
           ),
         }}

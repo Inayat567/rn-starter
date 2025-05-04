@@ -77,3 +77,6 @@ yarn-error.log
 
 # dotenv
 .env
+
+# VS Code
+.vscode/

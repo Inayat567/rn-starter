@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {normalizeFont, normalizeHeight, normalizeWidth} from '../../utils/globalFunctions';
+import {f, h, w} from '../../utils/globalFunctions';
 import {COLORS} from '../../utils/constants/color';
 
 const SCheckBox = StyleSheet.create({
@@ -7,12 +7,12 @@ const SCheckBox = StyleSheet.create({
     margin: 10,
   },
   icon: {
-    width: normalizeWidth(22),
-    height: normalizeHeight(25),
+    width: w(22),
+    height: h(25),
     borderRadius: 5,
   },
   title: {
-    fontSize: normalizeFont(18),
+    fontSize: f(18),
     fontWeight: 'bold',
     color: COLORS.black,
     textDecorationLine: 'none',

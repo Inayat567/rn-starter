@@ -17,10 +17,13 @@ const DateTimeSelector = ({
 }: DateTimeSelectorProps) => {
   return (
     <View
-      style={[SDTS.container, {
-        backgroundColor:
-          Platform.OS === OS.ios ? COLORS.grayExtraLight : COLORS.white,
-      }]}>
+      style={[
+        SDTS.container,
+        {
+          backgroundColor:
+            Platform.OS === OS.ios ? COLORS.grayExtraLight : COLORS.white,
+        },
+      ]}>
       <DateTimePicker
         display={Platform.OS === OS.ios ? 'spinner' : 'default'}
         testID="dateTimePicker"

@@ -62,8 +62,10 @@ export type InputFieldProp = {
   disable?: boolean;
   name?: string;
   multiline?: boolean;
-  icon?: string;
-  toggleVisible?: () => void;
+  leftIcon?: string;
+  rightIcon?: string;
+  onIconPress?: () => void;
+  containerStyle?: ViewStyle;
   style?: TextStyle;
 } & KeyboardTypeProp &
   AutoCapatalizeProp &

@@ -6,7 +6,7 @@ import SRangeSlider from './RangeSlider.styles';
 import {NormalText} from '../Heading';
 
 const RangeSliders = ({title, value, onChange}: RangeSliderProp) => {
-  const renderThumb = useCallback(() => <Text></Text>, []);
+  const renderThumb = useCallback(() => <Text />, []);
   const renderRail = useCallback(
     () => (
       <View

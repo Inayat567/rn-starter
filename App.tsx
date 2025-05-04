@@ -11,7 +11,7 @@ import BaseNavigation from './src/navigation';
 import {CustomStatusBar} from './src/components';
 import {requestPermissions} from './src/utils/permissions';
 
-function App(): React.JSX.Element {
+function App() {
   useEffect(() => {
     const getAllRequiredPermission = async () => {
       await requestPermissions();
@@ -31,6 +31,8 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: '5%',
+    paddingHorizontal: 5
   },
 });
 

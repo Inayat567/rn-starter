@@ -5,7 +5,7 @@ import Accordion from 'react-native-collapsible/Accordion';
 import * as Animatable from 'react-native-animatable';
 import Icon from 'react-native-vector-icons/Ionicons';
 import SAccordian from './Accordian.styles';
-import {normalizeFont} from '../../utils/globalFunctions';
+import {f} from '../../utils/globalFunctions';
 import {COLORS} from '../../utils/constants/color';
 
 const Accordian = ({heading, children}: AccordianProp) => {
@@ -26,7 +26,7 @@ const Accordian = ({heading, children}: AccordianProp) => {
         <Icon
           name={!collapse ? 'chevron-forward' : 'chevron-down'}
           color={COLORS.black}
-          size={normalizeFont(20)}
+          size={f(20)}
         />
       </Animatable.View>
     );

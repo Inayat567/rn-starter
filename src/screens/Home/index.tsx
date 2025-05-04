@@ -120,7 +120,7 @@ const Home = () => {
             value={name}
             onChangeText={name => setName(name)}
             placeholder={keywords.inputPlaceHolder}
-            icon="person-sharp"
+            rightIcon="person-sharp"
             disable={false}
             // multiline
           />

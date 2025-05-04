@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import { COLORS } from '../../utils/constants/color';
+import {COLORS} from '../../utils/constants/color';
 
 const SDDS = StyleSheet.create({
   container: {
@@ -19,7 +19,7 @@ const SDDS = StyleSheet.create({
   },
   label: {
     position: 'absolute',
-    backgroundColor:COLORS.white,
+    backgroundColor: COLORS.white,
     left: 22,
     top: 8,
     zIndex: 999,

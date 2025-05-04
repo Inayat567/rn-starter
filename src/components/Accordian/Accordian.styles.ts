@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {normalizeFont, normalizeHeight, normalizeWidth} from '../../utils/globalFunctions';
+import {f, h, w} from '../../utils/globalFunctions';
 import {COLORS} from '../../utils/constants/color';
 
 const SAccordian = StyleSheet.create({
@@ -7,21 +7,21 @@ const SAccordian = StyleSheet.create({
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderColor: COLORS.gray,
-    marginVertical: normalizeHeight(10),
+    marginVertical: h(10),
   },
   titleContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: normalizeWidth(10),
-    paddingVertical: normalizeHeight(5),
+    paddingHorizontal: w(10),
+    paddingVertical: h(5),
   },
   title: {
     color: COLORS.black,
-    fontSize: normalizeFont(16),
-    paddingVertical: normalizeHeight(5),
+    fontSize: f(16),
+    paddingVertical: h(5),
   },
   contentContainer: {
-    paddingVertical: normalizeHeight(10),
+    paddingVertical: h(10),
   },
 });
 

@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {COLORS} from '../../utils/constants/color';
-import {normalizeHeight} from '../../utils/globalFunctions';
+import {h} from '../../utils/globalFunctions';
 
 const SLoader = StyleSheet.create({
   container: {
@@ -14,7 +14,7 @@ const SLoader = StyleSheet.create({
   },
   indicator: {
     width: 50,
-    height: normalizeHeight(50),
+    height: h(50),
     backgroundColor: COLORS.white,
     borderRadius: 10,
   },

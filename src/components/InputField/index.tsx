@@ -3,7 +3,7 @@ import React, {forwardRef} from 'react';
 import {InputFieldProp} from './InputField';
 import SInputField from './InputField.styles';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {normalizeFont, normalizeHeight} from '../../utils/globalFunctions';
+import {f, h} from '../../utils/globalFunctions';
 import {COLORS} from '../../utils/constants/color';
 
 const InputField = forwardRef(
@@ -18,8 +18,10 @@ const InputField = forwardRef(
       multiline,
       onFocus,
       onBlur,
-      icon,
-      toggleVisible,
+      leftIcon,
+      rightIcon,
+      onIconPress,
+      containerStyle,
       style,
       autoComplete,
       autoCapatalize,
@@ -31,9 +33,18 @@ const InputField = forwardRef(
       <View
         style={[
           SInputField.container,
-          style,
-          {height: multiline ? normalizeHeight(100) : normalizeHeight(45)},
+          {height: multiline ? h(100) : h(50)},
+          containerStyle,
         ]}>
+        {leftIcon && (
+          <Icon
+            style={{flex: 0.1}}
+            color={COLORS.black}
+            name={leftIcon}
+            size={f(20)}
+            onPress={onIconPress}
+          />
+        )}
         <TextInput
           ref={ref}
           style={[SInputField.input, style]}
@@ -51,13 +62,13 @@ const InputField = forwardRef(
           multiline={multiline || false}
           returnKeyType={returnKeyType || 'next'}
         />
-        {icon && (
+        {rightIcon && (
           <Icon
             style={{flex: 0.1}}
             color={COLORS.black}
-            name={icon}
-            size={normalizeFont(20)}
-            onPress={toggleVisible}
+            name={rightIcon}
+            size={f(20)}
+            onPress={onIconPress}
           />
         )}
       </View>

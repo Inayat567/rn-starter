@@ -5,7 +5,7 @@ const SRangeSlider = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    margin: 10
+    margin: 10,
   },
   slider: {
     width: '75%',

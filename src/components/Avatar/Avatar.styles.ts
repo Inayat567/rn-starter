@@ -1,26 +1,26 @@
 import {StyleSheet} from 'react-native';
-import {normalizeHeight, normalizeWidth} from '../../utils/globalFunctions';
+import {h, w} from '../../utils/globalFunctions';
 
 const SAvatar = StyleSheet.create({
   container: {
-    marginVertical: normalizeHeight(10),
+    marginVertical: h(10),
     margin: 10,
   },
   small: {
-    width: normalizeWidth(40),
-    height: normalizeHeight(40),
+    width: w(40),
+    height: h(40),
     borderRadius: 20,
     // aspectRatio: '0.2',
   },
   medium: {
-    width: normalizeWidth(80),
-    height: normalizeHeight(80),
+    width: w(80),
+    height: h(80),
     borderRadius: 40,
     // aspectRatio: '0.4',
   },
   large: {
-    width: normalizeWidth(120),
-    height: normalizeHeight(120),
+    width: w(120),
+    height: h(120),
     borderRadius: 80,
     // aspectRatio: '0.6',
   },

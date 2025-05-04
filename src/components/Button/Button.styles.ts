@@ -1,21 +1,21 @@
 import {StyleSheet} from 'react-native';
-import {normalizeFont, normalizeHeight, normalizeWidth} from '../../utils/globalFunctions';
-import { COLORS } from '../../utils/constants/color';
+import {f, h, w} from '../../utils/globalFunctions';
+import {COLORS} from '../../utils/constants/color';
 
 const SButton = StyleSheet.create({
   container: {
-    width: normalizeWidth(320),
-    height: normalizeHeight(50),
+    width: w(320),
+    height: h(50),
     backgroundColor: COLORS.button,
     borderRadius: 10,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical: normalizeHeight(10)
+    marginVertical: h(10),
   },
   title: {
     color: COLORS.white,
-    fontSize: normalizeFont(16),
+    fontSize: f(16),
     fontWeight: 'bold',
   },
   inActive: {

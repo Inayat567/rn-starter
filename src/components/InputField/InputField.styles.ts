@@ -1,18 +1,17 @@
 import {Dimensions, StyleSheet} from 'react-native';
-import {normalizeHeight, normalizeWidth} from '../../utils/globalFunctions';
+import {h, w} from '../../utils/globalFunctions';
 import {COLORS} from '../../utils/constants/color';
 
-const {width, height} = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
 const SInputField = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    width: normalizeWidth(width * 0.9),
-    height: normalizeHeight(45),
+    width: w(width * 0.95),
     borderWidth: 1,
     borderColor: COLORS.gray,
-    marginVertical: normalizeHeight(5),
-    paddingHorizontal: normalizeWidth(10),
+    marginVertical: h(5),
+    paddingHorizontal: w(10),
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -21,6 +20,8 @@ const SInputField = StyleSheet.create({
   input: {
     flex: 1,
     color: COLORS.black,
+    height: '100%',
+    backgroundColor: 'red'
   },
 });
 

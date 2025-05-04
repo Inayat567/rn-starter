@@ -7,5 +7,5 @@ export interface ButtonProp {
   disabled?: boolean;
   loading?: boolean;
   secondary?: boolean;
-  titleColor?:  string;
+  titleColor?: string;
 }
