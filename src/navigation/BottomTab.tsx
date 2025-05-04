@@ -19,7 +19,7 @@ const BottomTab = () => {
         name="search"
         component={Home}
         options={{
-          tabBarLabelStyle: {fontSize: 0},
+          tabBarLabelStyle: {fontSize: 1},
           tabBarLabel: '',
           tabBarIcon: ({focused}) => (
             <Icon
@@ -34,7 +34,7 @@ const BottomTab = () => {
         name="wallet"
         component={Home}
         options={{
-          tabBarLabelStyle: {fontSize: 0},
+          tabBarLabelStyle: {fontSize: 1},
           tabBarLabel: '',
           tabBarIcon: ({focused}) => (
             <Icon
@@ -49,7 +49,7 @@ const BottomTab = () => {
         name="home"
         component={Home}
         options={{
-          tabBarLabelStyle: {fontSize: 0},
+          tabBarLabelStyle: {fontSize: 1},
           tabBarLabel: '',
           tabBarIcon: ({focused}) => (
             <Icon
@@ -64,7 +64,7 @@ const BottomTab = () => {
         name="profile"
         component={Home}
         options={{
-          tabBarLabelStyle: {fontSize: 0},
+          tabBarLabelStyle: {fontSize: 1},
           tabBarLabel: '',
           tabBarIcon: ({focused}) => (
             <Icon
@@ -79,7 +79,7 @@ const BottomTab = () => {
         name="setting"
         component={Home}
         options={{
-          tabBarLabelStyle: {fontSize: 0},
+          tabBarLabelStyle: {fontSize: 1},
           tabBarLabel: '',
           tabBarIcon: ({focused}) => (
             <Icon
